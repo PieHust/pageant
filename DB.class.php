@@ -1,4 +1,5 @@
 <?php
+
 class DB{
 	private $sql = '';
 	private $db = null;
@@ -27,7 +28,7 @@ class DB{
 		$this->sql = $sql;
 		$result = $this->db->query($sql);
 		return $result;
-	} 
+	}
 
 	public function select($arr,$table,$where = '1=1'){
 		$sql = 'select ';
@@ -49,14 +50,3 @@ class DB{
 	}
 
 }
-
-/*$db = DB::getInstance();
-$aa = $db->select(['*'],'stu');
-echo $DB->lastQuery();
-echo"<ul>";
-foreach($aa as $k => $v){
-	foreach($v as $value){
-		echo "<li>$value</li>";	
-	}
-}
-echo "</ul>";*/
